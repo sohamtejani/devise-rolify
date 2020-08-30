@@ -1,0 +1,17 @@
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+<h1 style="text-align:center;">Welcome to Home</h1>
+
+<% if user_signed_in?%>
+    <%= current_user.has_role? :admin %>
+    <h4>Welcome <%= current_user.name %></h4>
+    <%= link_to"Users", users_path, :class => "btn btn-light" ,:type => "button" %>
+
+<% else%>
+<h4>Please Sign In to Your Account    </h4>
+<% end %>
+
