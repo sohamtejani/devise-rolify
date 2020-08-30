@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<h3>show view</h3>
+<table class="table table-dark table-hover" style="width: auto;">
+    <tr>
+        <td><strong>Name:</strong></td>
+        <td><%= @user.name %></td>
+    </tr>
+
+    <tr>
+        <td><strong>Email:</strong></td>
+        <td><%= @user.email %></td>
+    </tr>
+
+    <tr>
+        <td><strong>Gender:</strong></td>
+        <td><%= @user.mobile_no %></td>
+    </tr>
+
+    <tr>
+        <td><strong>City:</strong></td>
+        <td><%= @user.city %></td>
+    </tr>
+</table>
+
+
+<%= link_to 'Edit', edit_user_registration_path(@user), :class => "btn btn-dark" %> |
+<%= link_to 'Back', users_path, :class => "btn btn-dark" %>
